@@ -1,0 +1,114 @@
+@media screen {
+  .dashContainer {
+    gap: 40px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .dashContainer h1 {
+    font-weight: 300;
+    font-size: 0.7rem;
+    text-transform: capitalize;
+    color: var(--background-color);
+  }
+
+  .logo {
+    height: 40px;
+    width: 40px;
+  }
+
+  .dashLinkContainer {
+    width: 100%;
+    display: flex;
+    text-align: start;
+    align-items: center;
+  }
+
+  .innerDashLink {
+    gap: 10px;
+    width: fit-content;
+    padding: 10px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 5px;
+    align-items: center;
+  }
+
+  .innerDashLink h1 {
+    display: none;
+  }
+
+  .innerDashLink:hover {
+    background-color: var(--light-primary-color);
+  }
+
+  .innerDashLink:hover h1 {
+    color: var(--tertiary-color);
+  }
+
+  .innerDashLink:hover .dashIcon {
+    color: var(--tertiary-color);
+  }
+
+  .dashIcon {
+    width: 20px;
+    height: 20px;
+    color: var(--background-color);
+  }
+
+  .activeDash {
+    color: var(--background-color);
+    background-color: var(--light-primary-color);
+  }
+
+  .activeDash h1 {
+    color: var(--tertiary-color);
+  }
+
+  .activeDash .dashIcon {
+    color: var(--tertiary-color);
+  }
+
+  .logOutLink h1 {
+    text-align: start;
+  }
+}
+
+/* using it as global style for larger devices  */
+@media only screen and (min-width: 48em) {
+  .innerDashLink h1 {
+    display: flex;
+  }
+
+  .dashContainer {
+    width: auto;
+    padding-top: 20px;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .innerDashLink {
+    width: 100%;
+   
+  }
+
+  .dashIcon {
+    width: 18px;
+    height: 18px;
+    color: var(--background-color);
+  }
+
+  .logo {
+    height: 80px;
+    width: 80px;
+  }
+
+  .dashLinkContainer {
+    flex-direction: row;
+  }
+}
